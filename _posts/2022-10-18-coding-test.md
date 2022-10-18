@@ -2,7 +2,7 @@
 layout: post
 title:  "[코딩테스트 연습] 중복된 문자 제거"
 subtitle:   ""
-categories: code
+categories: Code
 comments: true
 ---
 
