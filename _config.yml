@@ -17,7 +17,9 @@ tagline:             배움에는 끝이 없다!
 
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
-description:           어제보다 오늘 더 성장하는 개발 꿈나무 💻
+description:         >
+  어제보다 오늘 더 성장하는 개발 꿈나무 💻
+
 
 # This should be the same author as first entry in `_data/authors.yml`
 author:
