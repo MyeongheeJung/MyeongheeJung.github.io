@@ -2,7 +2,7 @@
 #  User configuration
 # -----------------------------------------------------------------------------
 
-title:               Myeonghee
+title:               MH's 개발일지🍀
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
@@ -13,12 +13,11 @@ url:                 https://MyeongheeJung.github.io
 baseurl:             ""
 
 # A very short description of your page
-tagline:             MH's 잔디농장🍀
+tagline:             배움에는 끝이 없다!
 
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
-description:         >
-  어제보다 오늘 더 성장하는 개발 꿈나무 💻
+description:           어제보다 오늘 더 성장하는 개발 꿈나무 💻
 
 # This should be the same author as first entry in `_data/authors.yml`
 author:
@@ -47,10 +46,10 @@ google_fonts:        Lato
 google_analytics:    #UA-92346434-1
 
 # Setting a disqus shortname will enable the comment section on pages with `comments: true` in the front matter
-disqus_shortname:    https-soraji-github-io-1
+disqus_shortname:    https-MyeongheeJung-github-io-1
 
 # This text will appear in the footer of every page. Markdown enabled.
-copyright:           '&copy; 2018. by sora'
+copyright:           '&copy; 2022. by MyeongheeJung'
 
 # Format of the permalinks
 permalink:           pretty

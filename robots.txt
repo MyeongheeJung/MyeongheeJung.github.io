@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://soraji.github.io/sitemap.xml
+Sitemap: https://myeongheejung.github.io/sitemap.xml
