@@ -31,7 +31,7 @@ animation속성은 @keyframes로 애니메이션을 정의하고, 정의한 애�
 CSS 애니메이션의 시작, 중간, 끝 등의 중간 상태를 정의한다.
 
 <br>
- ☑️ keyframe 작성 방법<br>
+☑️ keyframe 작성 방법<br>
 
 ```css
 @keyframes 애니메이션이름 {
