@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "[JavaScript] 배열과 객체"
+subtitle:   ""
+categories: js
+comments: true
+---
+
 ## 배열과 객체<br>
 자바스크립트에서 여러개의 데이터를 한 곳에 보관하고, 편하게 접근하기 위해 사용하는 데이터 타입
 
