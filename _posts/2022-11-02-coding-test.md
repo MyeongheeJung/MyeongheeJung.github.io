@@ -1,54 +1,86 @@
 ---
 layout: post
-title: "[코딩테스트 연습] 같은 숫자는 싫어"
+title: "[코딩테스트 연습] 며칠"
 subtitle: ""
 categories: code
 comments: true
----
+--
 
-## 같은 숫자는 싫어
+## 며칠
 
 ### 문제 설명
 
-배열 arr가 주어집니다. 배열 arr의 각 원소는 숫자 0부터 9까지로 이루어져 있습니다. 이때, 배열 arr에서 연속적으로 나타나는 숫자는 하나만 남기고 전부 제거하려고 합니다. 단, 제거된 후 남은 수들을 반환할 때는 배열 arr의 원소들의 순서를 유지해야 합니다. 예를 들면,
-
-arr = [1, 1, 3, 3, 0, 1, 1] 이면 [1, 3, 0, 1] 을 return 합니다.
-arr = [4, 4, 4, 3, 3] 이면 [4, 3] 을 return 합니다.
-배열 arr에서 연속적으로 나타나는 숫자는 제거하고 남은 수들을 return 하는 solution 함수를 완성해 주세요.
+입력되는 달(month)에 따라 각 달에 며칠이 있는지 보여주는 함수를 만들려고 합니다.<br>
+각 조건에 해당하는 알맞은 값을 입력해주세요.
 
 <br>
 
 ### 제한 사항
 
-- 배열 arr의 크기 : 1,000,000 이하의 자연수
-- 배열 arr의 원소의 크기 : 0보다 크거나 같고 9보다 작거나 같은 정수
+- month는 1~12의 숫자
 
 <br>
 
 ### 입출력 예 설명
 
 입출력 예 #1<br>
-arr [1,1,3,3,0,1,1]
-answer [1,3,0,1]
+days(1) // 31
 
 입출력 예 #2<br>
-arr [4,4,4,3,3]
-answer [4,3]
+days(2) // 28
+
+입출력 예 #4<br>
+days(4) // 30
+
 
 <br>
 
 ### 코드 작성
 
 ```js
-function solution(arr) {
-  var answer = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] !== arr[i + 1]) {
-      answer.push(arr[i]);
-    }
+function days(month) {
+  let days = "";
+  switch (month) {
+    case 1:
+      days = "31일";
+      break;
+    case 2:
+      days = "28일";
+      break;
+    case 3:
+      days = "31일";
+      break;
+    case 4:
+      days = "30일";
+      break;
+    case 5:
+      days = "31일";
+      break;
+    case 6:
+      days = "30일";
+      break;
+    case 7:
+      days = "31일";
+      break;
+    case 8:
+      days = "31일";
+      break;
+    case 9:
+      days = "30일";
+      break;
+    case 10:
+      days = "31일";
+      break;
+    case 11:
+      days = "30일";
+      break;
+    case 12:
+      days = "31일";
+      break;
   }
-  return answer;
+  return days;
 }
+
 ```
 
 <hr>
@@ -56,10 +88,24 @@ function solution(arr) {
 ### 참고하면 좋은 코드 작성법
 
 ```js
-function solution(arr) {
-  return arr.filter((val, index) => val != arr[index + 1]);
+const monthList = {
+  1: 31,
+  2: 28,
+  3: 31,
+  4: 30,
+  5: 31,
+  6: 30,
+  7: 31,
+  8: 31,
+  9: 30,
+  10: 31,
+  11: 30,
+  12: 31,
+};
+
+function days(month) {
+  return monthList[month];
 }
 ```
 
-[ Array.filter ] <br>
-filter() 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열을 반환한다.
+쉬운 문제이나, 객체의 "key - value"를 활용하여 답을 도출하는 게 더 간편하기 때문에 기록으로 남긴다.
