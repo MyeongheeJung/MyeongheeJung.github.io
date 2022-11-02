@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "[코딩테스트 연습] 며칠"
 subtitle: ""
@@ -7,6 +8,8 @@ comments: true
 --
 
 ## 며칠
+
+쉬운 문제이나, 객체의 "key - value"를 활용하여 답을 도출하는 게 더 간편하기 때문에 기록으로 남긴다.
 
 ### 문제 설명
 
@@ -31,7 +34,6 @@ days(2) // 28
 
 입출력 예 #4<br>
 days(4) // 30
-
 
 <br>
 
@@ -80,7 +82,6 @@ function days(month) {
   }
   return days;
 }
-
 ```
 
 <hr>
@@ -107,5 +108,3 @@ function days(month) {
   return monthList[month];
 }
 ```
-
-쉬운 문제이나, 객체의 "key - value"를 활용하여 답을 도출하는 게 더 간편하기 때문에 기록으로 남긴다.
