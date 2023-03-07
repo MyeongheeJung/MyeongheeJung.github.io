@@ -72,11 +72,7 @@ function solution(n, arr1, arr2) {
   for (let i = 0; i < map1.length; i++) {
     let str = "";
     for (let k = 0; k < map1[i].length; k++) {
-      if (map1[i][k] === "1" || map2[i][k] === "1") {
-        str += "#";
-      } else {
-        str += " ";
-      }
+      str += map1[i][k] == 1 || map2[i][k] == 1 ? "#" : " ";
     }
     answer.push(str);
   }
@@ -88,7 +84,7 @@ function solution(n, arr1, arr2) {
 
 [ TIP ]<br>
 배열에 담긴 수를 map 돌면서 2진수로 변환하고, 2진수의 길이를 맞추기 위해 padStart를 사용하여 n만큼 0을 추가해준다.
-반복문 안에서 map1 과 map2의 같은 자리에 요소를 비교하고 둘 다 1인 경우는 벽이므로 "#"을 아니면 공백을 넣어준다.
+반복문 안에서 map1 과 map2의 같은 자리에 요소를 비교하고 둘 1인 경우는 벽이므로 "#"을 아니면 공백을 넣어준다.
 <br>
 
 [ number.toString([radix]) ]<br>
