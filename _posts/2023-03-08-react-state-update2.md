@@ -6,7 +6,7 @@ categories: react
 comments: true
 ---
 
-# 상태의 배열 업데이트
+### 상태의 배열 업데이트
 
 > state는 배열를 포함하여 모든 종류의 JavaScript 값을 보유할 수 있다.<br>
 > 배열은 JavaScript에서 변경 가능하지만 state에 저장할 때는 변경 불가능한 것으로 취급해야 합니다.<br>
@@ -160,7 +160,10 @@ export default function List() {
 }
 ```
 
-# 배열 내부의 객체 업데이트
+<hr>
+<br>
+
+### 배열 내부의 객체 업데이트
 
 - 중첩된 상태를 업데이트할 때 업데이트하려는 지점부터 최상위 수준까지 복사본을 만들어야 한다.
 
