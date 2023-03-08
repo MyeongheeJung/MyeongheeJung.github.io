@@ -68,7 +68,7 @@ function solution(t, p) {
 <hr>
 
 [ TIP ]<br>
-반복문 안에서 p의 글자수 길이와 같은 새로운 글자를 만든다. 그 값을 p와 비교해서 작거나 같으면 result를 증가시킨다.
+반복문 안에서 p의 길이와 같은 새로운 문자열를 만든다. 그 값을 p와 비교해서 작거나 같으면 result를 증가시킨다.
 <br>
 
 [ str.slice(beginIndex, [endIndex:optional]) ]<br>
