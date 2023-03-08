@@ -168,73 +168,51 @@ export default function List() {
 import { useState } from "react";
 
 let nextId = 3;
-const initialList = [
-  { id: 0, title: "Big Bellies", seen: false },
-  { id: 1, title: "Lunar Landscape", seen: false },
-  { id: 2, title: "Terracotta Army", seen: true },
+const initialTodos = [
+  { id: 0, title: "Buy milk", done: true },
+  { id: 1, title: "Eat tacos", done: false },
+  { id: 2, title: "Brew tea", done: false },
 ];
 
-export default function BucketList() {
-  const [myList, setMyList] = useState(initialList);
-  const [yourList, setYourList] = useState(initialList);
+export default function TaskApp() {
+  const [todos, setTodos] = useState(initialTodos);
 
-  function handleToggleMyList(artworkId, nextSeen) {
-    setMyList(
-      myList.map((artwork) => {
-        if (artwork.id === artworkId) {
-          // Create a *new* object with changes
-          return { ...artwork, seen: nextSeen };
+  function handleAddTodo(title) {
+    setTodos([
+      ...todos,
+      {
+        id: nextId++,
+        title: title,
+        done: false,
+      },
+    ]);
+  }
+
+  function handleChangeTodo(nextTodo) {
+    setTodos(
+      todos.map((t) => {
+        if (t.id === nextTodo.id) {
+          return nextTodo;
         } else {
-          // No changes
-          return artwork;
+          return t;
         }
       })
     );
   }
 
-  function handleToggleYourList(artworkId, nextSeen) {
-    setYourList(
-      yourList.map((artwork) => {
-        if (artwork.id === artworkId) {
-          // Create a *new* object with changes
-          return { ...artwork, seen: nextSeen };
-        } else {
-          // No changes
-          return artwork;
-        }
-      })
-    );
+  function handleDeleteTodo(todoId) {
+    setTodos(todos.filter((t) => t.id !== todoId));
   }
 
   return (
     <>
-      <h1>Art Bucket List</h1>
-      <h2>My list of art to see:</h2>
-      <ItemList artworks={myList} onToggle={handleToggleMyList} />
-      <h2>Your list of art to see:</h2>
-      <ItemList artworks={yourList} onToggle={handleToggleYourList} />
+      <AddTodo onAddTodo={handleAddTodo} />
+      <TaskList
+        todos={todos}
+        onChangeTodo={handleChangeTodo}
+        onDeleteTodo={handleDeleteTodo}
+      />
     </>
-  );
-}
-
-function ItemList({ artworks, onToggle }) {
-  return (
-    <ul>
-      {artworks.map((artwork) => (
-        <li key={artwork.id}>
-          <label>
-            <input
-              type="checkbox"
-              checked={artwork.seen}
-              onChange={(e) => {
-                onToggle(artwork.id, e.target.checked);
-              }}
-            />
-            {artwork.title}
-          </label>
-        </li>
-      ))}
-    </ul>
   );
 }
 ```
@@ -249,62 +227,50 @@ Immer 라이브러리 사용하기
 > import { useImmer } from 'use-immer' 추가하기
 
 ```js
-import { useImmer } from "use-immer";
-
 let nextId = 3;
-const initialList = [
-  { id: 0, title: "Big Bellies", seen: false },
-  { id: 1, title: "Lunar Landscape", seen: false },
-  { id: 2, title: "Terracotta Army", seen: true },
+const initialTodos = [
+  { id: 0, title: "Buy milk", done: true },
+  { id: 1, title: "Eat tacos", done: false },
+  { id: 2, title: "Brew tea", done: false },
 ];
 
-export default function BucketList() {
-  const [myList, updateMyList] = useImmer(initialList);
-  const [yourArtworks, updateYourList] = useImmer(initialList);
+export default function TaskApp() {
+  const [todos, updateTodos] = useImmer(initialTodos);
 
-  function handleToggleMyList(id, nextSeen) {
-    updateMyList((draft) => {
-      const artwork = draft.find((a) => a.id === id);
-      artwork.seen = nextSeen;
+  function handleAddTodo(title) {
+    updateTodos((draft) => {
+      draft.push({
+        id: nextId++,
+        title: title,
+        done: false,
+      });
     });
   }
 
-  function handleToggleYourList(artworkId, nextSeen) {
-    updateYourList((draft) => {
-      const artwork = draft.find((a) => a.id === artworkId);
-      artwork.seen = nextSeen;
+  function handleChangeTodo(nextTodo) {
+    updateTodos((draft) => {
+      const todo = draft.find((t) => t.id === nextTodo.id);
+      todo.title = nextTodo.title;
+      todo.done = nextTodo.done;
+    });
+  }
+
+  function handleDeleteTodo(todoId) {
+    updateTodos((draft) => {
+      const index = draft.findIndex((t) => t.id === todoId);
+      draft.splice(index, 1);
     });
   }
 
   return (
     <>
-      <h1>Art Bucket List</h1>
-      <h2>My list of art to see:</h2>
-      <ItemList artworks={myList} onToggle={handleToggleMyList} />
-      <h2>Your list of art to see:</h2>
-      <ItemList artworks={yourArtworks} onToggle={handleToggleYourList} />
+      <AddTodo onAddTodo={handleAddTodo} />
+      <TaskList
+        todos={todos}
+        onChangeTodo={handleChangeTodo}
+        onDeleteTodo={handleDeleteTodo}
+      />
     </>
-  );
-}
-
-function ItemList({ artworks, onToggle }) {
-  return (
-    <ul>
-      {artworks.map((artwork) => (
-        <li key={artwork.id}>
-          <label>
-            <input
-              type="checkbox"
-              checked={artwork.seen}
-              onChange={(e) => {
-                onToggle(artwork.id, e.target.checked);
-              }}
-            />
-            {artwork.title}
-          </label>
-        </li>
-      ))}
-    </ul>
   );
 }
 ```
