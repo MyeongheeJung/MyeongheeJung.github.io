@@ -1,10 +1,6 @@
 ---
 layout: post
-title: "[코딩테스트 연습] 2021 카카오 채용연계형 인턴십 > 숫자 문자열과 영단어
-
-
-
-"
+title: "[코딩테스트 연습] 2021 카카오 채용연계형 인턴십 > 숫자 문자열과 영단어"
 subtitle: ""
 categories: code
 comments: true

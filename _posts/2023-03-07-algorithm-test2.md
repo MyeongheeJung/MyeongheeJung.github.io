@@ -1,9 +1,6 @@
 ---
 layout: post
-title: "[코딩테스트 연습] 문자열 내 마음대로 정렬하기
-
-
-"
+title: "[코딩테스트 연습] 문자열 내 마음대로 정렬하기"
 subtitle: ""
 categories: code
 comments: true

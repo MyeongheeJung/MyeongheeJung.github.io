@@ -1,9 +1,6 @@
 ---
 layout: post
-title: "[코딩테스트 연습] 2018 KAKAO BLIND RECRUITMENT > [1차] 비밀지도
-
-
-"
+title: "[코딩테스트 연습] 2018 KAKAO BLIND RECRUITMENT > [1차] 비밀지도"
 subtitle: ""
 categories: code
 comments: true
