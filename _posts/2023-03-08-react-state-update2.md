@@ -80,7 +80,7 @@ export default function List() {
 }
 ```
 
-<hr>
+<br>
 
 ### 배열을 변경하지 않고 항목 바꾸기
 
@@ -224,6 +224,8 @@ export default function TaskApp() {
   );
 }
 ```
+
+<br>
 
 ### Immer로 배열 내부의 객체 간결한 업데이트 방법
 
