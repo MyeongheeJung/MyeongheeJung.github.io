@@ -8,8 +8,11 @@ comments: true
 
 # 상태의 객체 업데이트
 
-state는 객체를 포함하여 모든 종류의 JavaScript 값을 보유할 수 있다.<br>
-그러나 React state 객체를 직접 변경해서는 안 돤다. 대신 객체를 업데이트하려면 새 객체를 생성(또는 기존 객체의 복사본을 만든 다음) 해당 복사본을 사용하도록 상태를 설정해야 한다.
+> state는 객체를 포함하여 모든 종류의 JavaScript 값을 보유할 수 있다.<br>
+> 객체는 JavaScript에서 변경 가능하지만 state에 저장할 때는 변경 불가능한 것으로 취급해야 한다.<br>
+> React에서는 state의 객체를 직접 변경하지 않고 교체한다.<br>
+> 객체를 업데이트하려면 새 객체를 생성(또는 기존 객체의 복사본을 만든 다음) 해당 복사본을 사용하도록 state를 설정해야 한다.
+> <br>
 
 ```js
 const [position, setPosition] = useState({
@@ -18,8 +21,8 @@ const [position, setPosition] = useState({
 });
 
 // 이 코드는 상태에서 기존 객체를 수정하기 때문에 문제가 된다.
-// 상태에 넣은 모든 JavaScript 객체를 읽기 전용으로 취급해야 한다.
-// 변경하는 대신 항상 교체해야 합니다.
+// React에서는 상태에 넣은 모든 JavaScript 객체를 읽기 전용으로 취급해야 한다.
+// 변경하는 대신 항상 교체해야 한다.
 position.x = e.clientX;
 position.y = e.clientY;
 
