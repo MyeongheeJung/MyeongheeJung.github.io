@@ -44,7 +44,6 @@ setArtists([{ id: nextId++, name: name }, ...artists]);
 ```
 
 <br>
-<br>
 
 ### 배열을 변경하지 않고 제거하는 방법
 
@@ -123,6 +122,8 @@ export default function CounterList() {
 }
 ```
 
+<br>
+
 ### 배열을 변경하지 않고 특정 위치에 항목 삽입
 
 ```js
@@ -165,7 +166,6 @@ export default function List() {
 ```
 
 <hr>
-<br>
 <br>
 
 ### 배열 내부의 객체 업데이트
