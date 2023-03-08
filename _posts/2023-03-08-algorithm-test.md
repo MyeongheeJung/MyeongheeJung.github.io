@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "[코딩테스트 연습] K번째수"
+title: "[코딩테스트 연습] K번째 수"
 subtitle: ""
 categories: code
 comments: true
 ---
 
-## K번째수
+## K번째 수
 
 ### 문제 설명
 

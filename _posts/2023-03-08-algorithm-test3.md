@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "[코딩테스트 연습] 크기가 작은 부분문자열"
+title: "[코딩테스트 연습] 크기가 작은 부분 문자열"
 subtitle: ""
 categories: code
 comments: true
 ---
 
-## 크기가 작은 부분문자열
+## 크기가 작은 부분 문자열
 
 ### 문제 설명
 
