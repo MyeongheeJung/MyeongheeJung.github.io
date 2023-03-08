@@ -6,7 +6,9 @@ categories: react
 comments: true
 ---
 
-### 배열로 작성된 state 업데이트
+## 배열로 작성된 state 업데이트
+
+<br>
 
 > state는 배열를 포함하여 모든 종류의 JavaScript 값을 보유할 수 있다.<br>
 > 배열은 JavaScript에서 변경 가능하지만 state에 저장할 때는 변경 불가능한 것으로 취급해야 합니다.<br>
@@ -26,8 +28,9 @@ comments: true
   - splice: 항목을 삽입하거나 삭제하기 위해 배열을 변경.
 
 <hr>
+<br>
 
-## 배열을 변경하지 않고 추가하는 방법
+### 배열을 변경하지 않고 추가하는 방법
 
 ```js
 let nextId = 0;
@@ -41,8 +44,9 @@ setArtists([{ id: nextId++, name: name }, ...artists]);
 ```
 
 <br>
+<br>
 
-## 배열을 변경하지 않고 제거하는 방법
+### 배열을 변경하지 않고 제거하는 방법
 
 ```js
 import { useState } from "react";
@@ -79,7 +83,7 @@ export default function List() {
 
 <hr>
 
-## 배열을 변경하지 않고 항목 바꾸기
+### 배열을 변경하지 않고 항목 바꾸기
 
 ```js
 import { useState } from "react";
@@ -119,7 +123,7 @@ export default function CounterList() {
 }
 ```
 
-## 배열을 변경하지 않고 특정 위치에 항목 삽입
+### 배열을 변경하지 않고 특정 위치에 항목 삽입
 
 ```js
 import { useState } from "react";
@@ -161,6 +165,7 @@ export default function List() {
 ```
 
 <hr>
+<br>
 <br>
 
 ### 배열 내부의 객체 업데이트
@@ -220,7 +225,7 @@ export default function TaskApp() {
 }
 ```
 
-## Immer로 배열 내부의 객체 간결한 업데이트 방법
+### Immer로 배열 내부의 객체 간결한 업데이트 방법
 
 - Immer를 사용하면 중첩된 객체의 사본을 쉽게 만들 수 있다.
 
