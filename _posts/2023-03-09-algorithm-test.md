@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "[코딩테스트 연습] 콜라 문제
-"
+title: "[코딩테스트 연습] 콜라 문제"
 subtitle: ""
 categories: code
 comments: true
